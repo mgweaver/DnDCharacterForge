@@ -20,28 +20,35 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mitchell was here!"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.246" />
+        app:layout_constraintVertical_bias="0.246"
+        tools:text="Mitchell was here" />
 
     <Button
         android:id="@+id/Create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="157dp" />
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.278"
+        tools:text="Create" />
 
     <Button
         android:id="@+id/Select"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toEndOf="@+id/Create"
-        tools:layout_editor_absoluteY="157dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.278"
+        tools:text="Select" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
