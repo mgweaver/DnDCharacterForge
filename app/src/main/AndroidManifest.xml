@@ -9,23 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".StatsScreen2"
-            android:label="@string/title_activity_stats_screen2"
-            android:parentActivityName=".StatsScreen1"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.ddcharacterforge.StatsScreen1" />
-        </activity>
-        <activity
-            android:name=".StatsScreen1"
-            android:label="@string/title_activity_stats_screen1"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".StatsSheet1"
-            android:label="@string/title_activity_stats_sheet1"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".CreationActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

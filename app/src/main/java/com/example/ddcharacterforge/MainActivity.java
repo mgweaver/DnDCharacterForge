@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void selectButton(View view){
-        Intent intent = new Intent(this, StatsScreen1.class);
+        Intent intent = new Intent(this, Sheet.class);
         //EditText editText = (EditText) findViewById(R.id.editText);
         //String message = editText.getText().toString();
         //intent.putExtra("message", message);
