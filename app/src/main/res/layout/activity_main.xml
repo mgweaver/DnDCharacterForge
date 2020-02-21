@@ -28,12 +28,13 @@
         tools:text="Mitchell was here" />
 
     <Button
-        android:id="@+id/Create"
+        android:id="@+id/CreateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
         android:onClick="creationButton"
+        android:text="Create"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -41,15 +42,16 @@
         tools:text="Create" />
 
     <Button
-        android:id="@+id/Select"
+        android:id="@+id/SelectButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="selectButton"
+        android:text="Select"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.718"
-        app:layout_constraintStart_toEndOf="@+id/Create"
+        app:layout_constraintStart_toEndOf="@+id/CreateButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278"
-        tools:text="Select" />
+        app:layout_constraintVertical_bias="0.278" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

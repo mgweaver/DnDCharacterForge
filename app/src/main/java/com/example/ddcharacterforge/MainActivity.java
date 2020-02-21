@@ -26,5 +26,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void selectButton(View view){
+        Intent intent = new Intent(this, StatsScreen1.class);
+        //EditText editText = (EditText) findViewById(R.id.editText);
+        //String message = editText.getText().toString();
+        //intent.putExtra("message", message);
+        startActivity(intent);
+    }
+
 
 }
