@@ -13,9 +13,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Hi from Mason :)
-        //Hi Mason.
-        // HIIIIIi
     }
 
     public void creationButton(View view){
@@ -27,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void selectButton(View view){
-        Intent intent = new Intent(this, Sheet.class);
+        Intent intent = new Intent(this, SelectionActivity.class);
         //EditText editText = (EditText) findViewById(R.id.editText);
         //String message = editText.getText().toString();
         //intent.putExtra("message", message);
