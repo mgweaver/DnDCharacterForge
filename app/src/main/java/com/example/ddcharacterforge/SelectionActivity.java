@@ -16,9 +16,6 @@ public class SelectionActivity extends AppCompatActivity {
 
     public void creationButton(View view) {
         Intent intent = new Intent(this, CreationActivity.class);
-        //EditText editText = (EditText) findViewById(R.id.editText);
-        //String message = editText.getText().toString();
-        //intent.putExtra("message", message);
         startActivity(intent);
     }
 }
