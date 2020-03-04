@@ -3,9 +3,10 @@ package com.example.ddcharacterforge;
 
 public class Character {
     private String name;
-    private Race race;
-    private PlayerClass playerClass;
-    private Backgroud background;
+    private Race races;
+    private PlayerClass classes;
+    private Archetypes archetypes;
+    private Backgroud backgrounds;
     private String invortory;
     private int hp;
     private int strength;
