@@ -31,5 +31,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void diceButton(View view) {
+        Intent intent = new Intent(this, DiceActivity.class);
+        startActivity(intent);
+    }
 
 }
