@@ -13,4 +13,10 @@ public class DiceHandler {
 //int d6 = Math.random() * ( 6 - 1 )
 //Rolling d4
 //int d4 = Math.random() * ( 4 - 1 )
+// System.out.println(d20);
+// System.out.println(d12);
+// System.out.println(d10);
+// System.out.println(d8);
+// System.out.println(d6);
+// System.out.println(d4);
 }
