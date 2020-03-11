@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Bob",
+    "race": "Human",
+    "class": "Human",
+    "archetypes": "Nothing",
+    "background": "Born in Rexburg, Idaho and has lived a very sad life",
+    "inventory": ["sword", "shield"],
+    "hp": 100,
+    "strength": 10,
+    "constitution": 9,
+    "dexterity": 8,
+    "intelligence": 7,
+    "wisdom": 6,
+    "charisma": 5,
+  }
+]
