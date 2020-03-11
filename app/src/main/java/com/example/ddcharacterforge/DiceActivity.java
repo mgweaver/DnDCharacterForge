@@ -70,31 +70,31 @@ public class DiceActivity extends AppCompatActivity {
     }
 
     private void rollD20() {
-        double d20result = java.lang.Math.random() * 20;
-        result.setText("You rolled a" + " " + (Math.round(d20result)+ 1));
+        double d20result = (int) (Math.random() * 20) + 1;
+        result.setText("You rolled a" + " " + Math.round(d20result));
     }
     private void rollD12() {
-        double d12result = java.lang.Math.random() * 12;
-        result.setText("You rolled a" + " " + (Math.round(d12result)+ 1));
+        double d12result = (int) (Math.random() * 12) + 1;
+        result.setText("You rolled a" + " " + Math.round(d12result));
     }
 
     private void rollD10() {
-        double d10result = java.lang.Math.random() * 10;
-        result.setText("You rolled a" + " " + (Math.round(d10result) + 1));
+        double d10result = (int) (Math.random() * 10) + 1;
+        result.setText("You rolled a" + " " + Math.round(d10result));
     }
 
     private void rollD8() {
-        double d8result = java.lang.Math.random() * 8;
-        result.setText("You rolled a" + " " + (Math.round(d8result) + 1));
+        double d8result = (int) (Math.random() * 8) + 1;
+        result.setText("You rolled a" + " " + Math.round(d8result));
     }
 
     private void rollD6() {
-        double d6result = java.lang.Math.random() * 6;
-        result.setText("You rolled a" + " " + (Math.round(d6result) + 1));
+        double d6result = (int) (Math.random() * 6) + 1;
+        result.setText("You rolled a" + " " + Math.round(d6result));
     }
 
     private void rollD4() {
-        double d4result = java.lang.Math.random() * 4;
-        result.setText("You rolled a" + " " + (Math.round(d4result) + 1));
+        double d4result = (int) (Math.random() * 4) + 1;
+        result.setText("You rolled a" + " " + Math.round(d4result));
     }
 }
