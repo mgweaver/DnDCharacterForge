@@ -3,4 +3,6 @@
     <string name="title_activity_dice">DiceActivity</string>
     <string name="title_activity_character_page">CharacterPageActivity</string>
     <string name="d20">D20</string>
+    <string name="d12">D12</string>
+    <string name="test_dice_activity">Test Dice Activity</string>
 </resources>
