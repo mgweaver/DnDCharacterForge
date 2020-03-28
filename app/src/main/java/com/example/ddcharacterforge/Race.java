@@ -1,10 +1,23 @@
 package com.example.ddcharacterforge;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Race {
     private String name;
     private String displayname;
-    private String abilityscorebonuses;
+    private List<AbilityScoreBonuses> abilityscorebonuses = new ArrayList<>();
     private String speed;
-    private String languages;
-    private String features;
+    private List<String> languages = new ArrayList<>();
+    private List<Features> features = new ArrayList<>();
+
+    public Race(){
+        name = "Human";
+        displayname = "Human";
+        abilityscorebonuses.add(new AbilityScoreBonuses());
+        speed = "30";
+        languages.add("Common");
+        languages.add("One Extra Language");
+        features.add(new Features());
+    }
 }

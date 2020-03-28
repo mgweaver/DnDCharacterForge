@@ -6,18 +6,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.gson.Gson;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.io.Writer;
 
 public class SelectionActivity extends AppCompatActivity {
+    Character test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +66,30 @@ public class SelectionActivity extends AppCompatActivity {
         }
 
         String jsonString = writer.toString();
-        TextView result = findViewById(R.id.displayResult);
+        TextView result = findViewById(R.id.textView7);
         result.setText(jsonString);
+
+        Character test2 = new Character();
+
+        Gson gson = new Gson();
+        String characterJSON = gson.toJson(test2);
+        result.setText(characterJSON);
+
+        try {
+            FileOutputStream fileout = openFileOutput("test_JSON", MODE_PRIVATE);
+            OutputStreamWriter outputWriter = new OutputStreamWriter(fileout);
+            outputWriter.write(characterJSON);
+            outputWriter.close();
+
+            Toast.makeText(getBaseContext(), "File saved successfully!",
+                    Toast.LENGTH_SHORT).show();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void creationButton(View view) {
