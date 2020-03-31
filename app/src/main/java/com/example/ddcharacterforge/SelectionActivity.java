@@ -96,4 +96,9 @@ public class SelectionActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CreationActivity.class);
         startActivity(intent);
     }
+
+    public void statsButton(View view){
+        Intent intent = new Intent(this, StatsActivity.class);
+        startActivity(intent);
+    }
 }
