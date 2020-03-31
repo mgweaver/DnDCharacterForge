@@ -7,6 +7,7 @@ import java.util.List;
 public class Character {
     private String name;
     private List<Race> races = new ArrayList<>();
+    private Subraces subraces;
     private PlayerClass classes;
     private Archetypes archetypes;
     private Backgroud backgrounds;
