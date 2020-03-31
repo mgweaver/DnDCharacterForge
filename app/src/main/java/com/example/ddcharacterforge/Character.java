@@ -14,7 +14,7 @@ public class Character {
     private List<String> inventory = new ArrayList();
     private String level;
     private int hp;
-    private int strength;
+    public String strength;
     private int constitution;
     private int dexterity;
     private int intelligence;
@@ -30,7 +30,7 @@ public class Character {
         inventory.add("Longsword");
         level = "1";
         hp = 12;
-        strength = 18;
+        strength = "18";
         constitution = 16;
         dexterity = 14;
         intelligence = 12;

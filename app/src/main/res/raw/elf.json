@@ -1,0 +1,7 @@
+{"background":{}, "races":[{"abilityscorebonuses":[{"Dexterity":"2"}],
+  "name":"elf", "displayname":"elf", "features":[{"featuretextwithbullet":["You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
+                                                                            "You have advantage on saving throws against being charmed, and magic can’t put you to sleep.",
+                                                                            "Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."],
+                                                                            "setskillproficiency":[{"Perception ":"true"}]}],
+  "languages":["Common","Elvish"], "speed":"30"}],
+  "subraces":{}, "classes":{}, "archetypes":{}}
