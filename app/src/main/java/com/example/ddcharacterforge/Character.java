@@ -17,13 +17,61 @@ public class Character {
     private Backgroud backgrounds;
     private List<String> inventory = new ArrayList();
     private String level;
-    private int hp;
-    public String strength;
-    private int constitution;
-    private int dexterity;
-    private int intelligence;
-    private int wisdom;
-    private int charisma;
+    private String hp;
+    private String strength;
+    private String constitution;
+    private String dexterity;
+    private String intelligence;
+    private String wisdom;
+    private String charisma;
+
+    public String getStrength() {
+        return strength;
+    }
+
+    public void setStrength(String strength) {
+        this.strength = strength;
+    }
+
+    public String getConstitution() {
+        return constitution;
+    }
+
+    public void setConstitution(String constitution) {
+        this.constitution = constitution;
+    }
+
+    public String getDexterity() {
+        return dexterity;
+    }
+
+    public void setDexterity(String dexterity) {
+        this.dexterity = dexterity;
+    }
+
+    public String getIntelligence() {
+        return intelligence;
+    }
+
+    public void setIntelligence(String intelligence) {
+        this.intelligence = intelligence;
+    }
+
+    public String getWisdom() {
+        return wisdom;
+    }
+
+    public void setWisdom(String wisdom) {
+        this.wisdom = wisdom;
+    }
+
+    public String getCharisma() {
+        return charisma;
+    }
+
+    public void setCharisma(String charisma) {
+        this.charisma = charisma;
+    }
 
     public Character(){
         races.add(new Race());
@@ -33,12 +81,12 @@ public class Character {
         name = "Mitchell";
         inventory.add("Longsword");
         level = "1";
-        hp = 12;
+        hp = "12";
         strength = "18";
-        constitution = 16;
-        dexterity = 14;
-        intelligence = 12;
-        wisdom = 10;
-        charisma = 12;
+        constitution = "16";
+        dexterity = "14";
+        intelligence = "12";
+        wisdom = "10";
+        charisma = "12";
     }
 }

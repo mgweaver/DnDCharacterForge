@@ -1,5 +1,0 @@
-{"background":{}, "races":[], "subraces":{"name":"elf wood", "displayname":"elf wood", "baserace":"elf", "abilityscorebonuses":[{"Wisdom":"1"}],
-  "features":[{"featuretextwithbullet":["You have proficiency with the longsword, shortsword, shortbow, and longbow.",
-                                        "Your base walking speed increases to 35 feet.",
-                                        "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."], "setskillproficiency":[]}]},
-  "classes":{}, "archetypes":{}}

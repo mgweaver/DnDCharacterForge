@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class CreationActivity extends AppCompatActivity {
     Character newCharacter = new Character();
@@ -45,19 +47,26 @@ public class CreationActivity extends AppCompatActivity {
 
     public void abilityScoreButton(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Title");
+        LinearLayout lila1= new LinearLayout(this);
+        lila1.setOrientation(LinearLayout.HORIZONTAL);
+        builder.setTitle("Ability Score");
 
 // Set up the input
         final EditText input = new EditText(this);
 // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-        input.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        builder.setView(input);
+        input.setInputType(InputType.TYPE_CLASS_NUMBER);
+        final EditText con = new EditText(this);
+        con.setInputType(InputType.TYPE_CLASS_NUMBER);
+        final TextView stength = new TextView(this);
+        lila1.addView(con);
+        lila1.addView(input);
+        builder.setView(lila1);
 
 // Set up the buttons
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                newCharacter.strength = input.getText().toString();
+                newCharacter.setStrength(input.getText().toString());
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
