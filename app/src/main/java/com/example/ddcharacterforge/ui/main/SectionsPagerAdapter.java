@@ -8,7 +8,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.ddcharacterforge.InventoryFragment;
+import com.example.ddcharacterforge.OverviewFragment;
 import com.example.ddcharacterforge.R;
+import com.example.ddcharacterforge.SkillsFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -27,9 +30,19 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1);
+        Fragment fragment = null;
+        switch (position){
+            case 0:
+                fragment = new InventoryFragment();
+                break;
+            case 1:
+                fragment = new OverviewFragment();
+                break;
+            case 2:
+                fragment = new SkillsFragment();
+
+        }
+        return fragment;
     }
 
     @Nullable
