@@ -23,7 +23,7 @@ public class SelectionActivity extends AppCompatActivity {
 
         // Set buttons to invisible to start
         findViewById(R.id.button4).setVisibility(View.INVISIBLE);
-        findViewById(R.id.button5).setVisibility(View.INVISIBLE);
+        findViewById(R.id.d20).setVisibility(View.INVISIBLE);
         findViewById(R.id.button6).setVisibility(View.INVISIBLE);
         findViewById(R.id.button7).setVisibility(View.INVISIBLE);
         findViewById(R.id.button9).setVisibility(View.INVISIBLE);
@@ -38,7 +38,7 @@ public class SelectionActivity extends AppCompatActivity {
         }
         if (Character.myCharacters.size() > 1)
         {
-            findViewById(R.id.button5).setVisibility(View.VISIBLE);
+            findViewById(R.id.d20).setVisibility(View.VISIBLE);
         }
         if (Character.myCharacters.size() > 2)
         {

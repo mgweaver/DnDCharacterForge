@@ -18,6 +18,7 @@ public class DiceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dice);
 
         ImageButton d20 = findViewById(R.id.imageButton);
+        //ImageButton d20 = findViewById(R.id.d20);
         ImageButton d12 = findViewById(R.id.imageButton2);
         ImageButton d10 = findViewById(R.id.imageButton3);
         ImageButton d8 = findViewById(R.id.imageButton4);
