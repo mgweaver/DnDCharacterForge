@@ -12,7 +12,7 @@ public class SelectionActivity extends AppCompatActivity {
     // Create a sample character
     public Character testCharacter = new Character();
     private LinearLayout characterListLayout;
-
+    public static final String CHAR_NAME_TEXT = "com.example.ddcharactergorge.charName";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,35 +65,35 @@ public class SelectionActivity extends AppCompatActivity {
         String charName = Character.myCharacters.get(0).getName();
 
         Intent intent = new Intent(this, StatsActivity.class);
-        intent.putExtra("charName1", charName);
+        intent.putExtra(CHAR_NAME_TEXT, charName);
         startActivity(intent);
     }
     public void statsButtonChar2(View view){
         String charName = Character.myCharacters.get(1).getName();
 
         Intent intent = new Intent(this, StatsActivity.class);
-        intent.putExtra("charName", charName);
+        intent.putExtra(CHAR_NAME_TEXT, charName);
         startActivity(intent);
     }
     public void statsButtonChar3(View view){
         String charName = Character.myCharacters.get(2).getName();
 
         Intent intent = new Intent(this, StatsActivity.class);
-        intent.putExtra("charName", charName);
+        intent.putExtra(CHAR_NAME_TEXT, charName);
         startActivity(intent);
     }
     public void statsButtonChar4(View view){
         String charName = Character.myCharacters.get(3).getName();
 
         Intent intent = new Intent(this, StatsActivity.class);
-        intent.putExtra("charName", charName);
+        intent.putExtra(CHAR_NAME_TEXT, charName);
         startActivity(intent);
     }
     public void statsButtonChar5(View view){
         String charName = Character.myCharacters.get(4).getName();
 
         Intent intent = new Intent(this, StatsActivity.class);
-        intent.putExtra("charName", charName);
+        intent.putExtra(CHAR_NAME_TEXT, charName);
         startActivity(intent);
     }
 }

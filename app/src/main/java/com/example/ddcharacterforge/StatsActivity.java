@@ -20,6 +20,12 @@ public class StatsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // Use this variable 'charName' to loop through myCharacters to check for a match,
+        // then load that character's stats and display them
+        Intent intent = getIntent();
+        String charName = intent.getStringExtra(SelectionActivity.CHAR_NAME_TEXT);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
