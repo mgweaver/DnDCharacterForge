@@ -10,6 +10,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -20,8 +21,20 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 
-public class CreationActivity extends AppCompatActivity {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StringWriter;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
+
+public class CreationActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     Character newCharacter = new Character();
+    String race;
+    String playerclass;
+    String background;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +67,10 @@ public class CreationActivity extends AppCompatActivity {
         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         backgrounds.setAdapter(adapter3);
+
+        races.setOnItemSelectedListener(this);
+        playerClasses.setOnItemSelectedListener(this);
+        backgrounds.setOnItemSelectedListener(this);
     }
 
     public void abilityScoreButton(View view){
@@ -141,8 +158,68 @@ public class CreationActivity extends AppCompatActivity {
         EditText name = findViewById(R.id.CharacterName);
         newCharacter.setName(name.getText().toString());
 
+
+
         Gson gson = new Gson();
+
+        newCharacter.classes = gson.fromJson(getJSON("fighter"), PlayerClass.class);
+        newCharacter.races = gson.fromJson(getJSON("human"), Race.class);
+        newCharacter.backgrounds = gson.fromJson(getJSON("acolyte"), Backgroud.class);
         String characterJSON = gson.toJson(newCharacter);
         test.setText(characterJSON);
+        Character.myCharacters.add(newCharacter);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        String text = parent.getItemAtPosition(position).toString();
+        String stringofparent = parent.toString();
+        String lasttwo = stringofparent.substring(stringofparent.length() - 2);
+        TextView spinnertest = findViewById(R.id.textView13);
+        spinnertest.setText(text);
+        String races = "s}";
+        if("s}" == lasttwo){
+            playerclass = text;
+            spinnertest.setText("playerclass");
+        }
+        if(lasttwo == "e}"){
+            race = text;
+            spinnertest.setText("races");
+        }
+        if(lasttwo == "d}"){
+            background = text;
+            spinnertest.setText("background");
+        }
+
+    }
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) { }
+
+    public String getJSON(String jsonfile){
+        int resid = getResources().getIdentifier(jsonfile, "raw", this.getPackageName());
+
+        InputStream is = getResources().openRawResource(resid);
+        Writer writer = new StringWriter();
+        char[] buffer = new char[1024];
+        try {
+            Reader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+            int n;
+            while ((n = reader.read(buffer)) != -1) {
+                writer.write(buffer, 0, n);
+            }
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                is.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        String jsonString = writer.toString();
+        return jsonString;
     }
 }

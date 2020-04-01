@@ -13,12 +13,12 @@ public class Race implements Serializable {
     private List<Features> features = new ArrayList<>();
 
     public Race(){
-        name = "Human";
-        displayname = "Human";
-        abilityscorebonuses.add(new AbilityScoreBonuses());
-        speed = "30";
-        languages.add("Common");
-        languages.add("One Extra Language");
-        features.add(new Features());
+//        name = "Human";
+//        displayname = "Human";
+//        abilityscorebonuses.add(new AbilityScoreBonuses());
+//        speed = "30";
+//        languages.add("Common");
+//        languages.add("One Extra Language");
+//        features.add(new Features());
     }
 }

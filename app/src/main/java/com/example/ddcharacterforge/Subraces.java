@@ -11,8 +11,8 @@ public class Subraces {
     private List<AbilityScoreBonuses> abilityscorebonuses = new ArrayList<>();
 
     public Subraces(){
-        name = "forest gnome";
-        displayname = "forest gnome";
-        baserace = "gnome";
+//        name = "forest gnome";
+//        displayname = "forest gnome";
+//        baserace = "gnome";
     }
 }

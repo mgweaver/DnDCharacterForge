@@ -21,12 +21,12 @@ public class SetSkillProficiency implements Serializable {
     private String Performance;
     private String Persuasion;
 
-    public SetSkillProficiency(){
-        Deception = "true";
-        Insight = "true";
-    }
-    public SetSkillProficiency(int i){
-        Athletics = "true";
-        Intimidation = "true";
-    }
+//    public SetSkillProficiency(){
+//        Deception = "true";
+//        Insight = "true";
+//    }
+//    public SetSkillProficiency(int i){
+//        Athletics = "true";
+//        Intimidation = "true";
+//    }
 }

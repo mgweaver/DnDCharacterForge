@@ -1,6 +1,5 @@
-{"background":{}, "races":[{"abilityscorebonuses":[{"Dexterity":"2"}],
+{"abilityscorebonuses":[{"Dexterity":"2"}],
   "name":"halfling", "displayname":"halfling", "features":[{"featuretextwithbullet":["When you roll a  1  on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.",
                                                                                       "You have advantage on saving throws against being frightened.",
                                                                                       "You can move through the space of any creature that is of a size larger than yours."], "setskillproficiency":[]}],
-  "languages":["Common","Halfling"], "speed":"25"}],
-  "subraces":{}, "classes":{}, "archetypes":{}}
+  "languages":["Common","Halfling"], "speed":"25"}

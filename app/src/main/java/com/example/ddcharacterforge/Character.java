@@ -10,11 +10,11 @@ public class Character {
     public static List<Character> myCharacters = new ArrayList<>();
     
     private String name;
-    private List<Race> races = new ArrayList<>();
-    private Subraces subraces;
-    private PlayerClass classes;
-    private Archetypes archetypes;
-    private Backgroud backgrounds;
+    public Race races;
+    public Subraces subraces;
+    public PlayerClass classes;
+    public Archetypes archetypes;
+    public Backgroud backgrounds;
     private List<String> inventory = new ArrayList();
     private String level;
     private String hp;

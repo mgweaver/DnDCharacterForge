@@ -1,3 +1,2 @@
-{"background":{}, "races":[], "subraces":{"name":"halfling lightfoot", "displayname":"halfing lightfoot", "baserace":"halfling", "abilityscorebonuses":[{"Charisma":"1"}],
-  "features":[{"featuretextwithbullet":["You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."], "setskillproficiency":[]}]},
-  "classes":{}, "archetypes":{}}
+{"name":"halfling lightfoot", "displayname":"halfing lightfoot", "baserace":"halfling", "abilityscorebonuses":[{"Charisma":"1"}],
+  "features":[{"featuretextwithbullet":["You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."], "setskillproficiency":[]}]}

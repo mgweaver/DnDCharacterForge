@@ -1,8 +1,7 @@
-{"background":{}, "races":[{"abilityscorebonuses":[{"Constitution":"2"}],
+{"abilityscorebonuses":[{"Constitution":"2"}],
   "name":"dwarf", "displayname":"dwarf", "features":[{"featuretextwithbullet":["You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
                                                                                 "You have advantage on saving throws against poison, and you have resistance against poison damage.",
                                                                                 "You have proficiency with the battleaxe, handaxe, throwing hammer, and warhammer.",
                                                                                 "You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, or mason’s tools.",
                                                                                 "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."], "setskillproficiency":[]}],
-  "languages":["Common","Dwarvish"], "speed":"25"}],
-  "subraces":{}, "classes":{}, "archetypes":{}}
+  "languages":["Common","Dwarvish"], "speed":"25"}

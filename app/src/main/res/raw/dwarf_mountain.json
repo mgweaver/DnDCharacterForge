@@ -1,3 +1,2 @@
-{"background":{}, "races":[], "subraces":{"name":"dwarf mountain", "displayname":"dwarf mountain", "baserace":"dwarf", "abilityscorebonuses":[{"Strength":"2"}],
-  "features":[{"featuretextwithbullet":["You have proficiency with light and medium armor."], "setskillproficiency":[]}]},
-  "classes":{}, "archetypes":{}}
+{"name":"dwarf mountain", "displayname":"dwarf mountain", "baserace":"dwarf", "abilityscorebonuses":[{"Strength":"2"}],
+  "features":[{"featuretextwithbullet":["You have proficiency with light and medium armor."], "setskillproficiency":[]}]}

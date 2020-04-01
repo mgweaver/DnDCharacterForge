@@ -1,5 +1,4 @@
-{"background":{}, "races":[], "subraces":{"name":"elf high", "displayname":"elf high", "baserace":"elf", "abilityscorebonuses":[{"Intelligence":"1"}],
+{"name":"elf high", "displayname":"elf high", "baserace":"elf", "abilityscorebonuses":[{"Intelligence":"1"}],
   "features":[{"featuretextwithbullet":["You have proficiency with the longsword, shortsword, shortbow, and longbow.",
                                         "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.",
-                                        "You can speak, read, and write one extra language of your choice."], "setskillproficiency":[]}]},
-  "classes":{}, "archetypes":{}}
+                                        "You can speak, read, and write one extra language of your choice."], "setskillproficiency":[]}]}

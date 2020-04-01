@@ -20,20 +20,20 @@ public class PlayerClass implements Serializable {
     private List<ClassLevel> classlevel = new ArrayList<>();
 
     public PlayerClass(){
-        name = "Fighter";
-        displayname = "Fighter";
-        hitdie = "10";
-        armorproficiencies.add("All armor");
-        armorproficiencies.add("shields");
-        weaponfroficiences.add("Simple weapons");
-        weaponfroficiences.add("Martial weapons");
-        toolproficiences.add("None");
-        saveproficiences.add("Strength");
-        saveproficiences.add("Constitution");
-        classskills.addAll(Arrays.asList("Acrobatics","Animal Handling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival"));
-        skillcount = "2";
-        spellprogression = "None";
-        spellcastingability = "None";
-        classlevel.add(new ClassLevel());
+//        name = "Fighter";
+//        displayname = "Fighter";
+//        hitdie = "10";
+//        armorproficiencies.add("All armor");
+//        armorproficiencies.add("shields");
+//        weaponfroficiences.add("Simple weapons");
+//        weaponfroficiences.add("Martial weapons");
+//        toolproficiences.add("None");
+//        saveproficiences.add("Strength");
+//        saveproficiences.add("Constitution");
+//        classskills.addAll(Arrays.asList("Acrobatics","Animal Handling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival"));
+//        skillcount = "2";
+//        spellprogression = "None";
+//        spellcastingability = "None";
+//        classlevel.add(new ClassLevel());
     }
 }

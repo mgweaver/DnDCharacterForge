@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="DnD_Classes">
-        <item>Barbarian</item>
-        <item>Bard</item>
-        <item>Cleric</item>
-        <item>Druid</item>
-        <item>Fighter</item>
-        <item>Monk</item>
-        <item>Paladin</item>
-        <item>Ranger</item>
-        <item>Rogue</item>
-        <item>Sorcerer</item>
-        <item>Warlock</item>
-        <item>Wizard</item>
+        <item>barbarian</item>
+        <item>bard</item>
+        <item>cleric</item>
+        <item>druid</item>
+        <item>fighter</item>
+        <item>monk</item>
+        <item>paladin</item>
+        <item>ranger</item>
+        <item>rogue</item>
+        <item>sorcerer</item>
+        <item>warlock</item>
+        <item>wizard</item>
     </string-array>
 </resources>

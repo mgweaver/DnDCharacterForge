@@ -1,3 +1,2 @@
-{"background":{}, "races":[], "subraces":{"name":"halfling stout", "displayname":"halfing stout", "baserace":"halfling", "abilityscorebonuses":[{"Constitution":"1"}],
-  "features":[{"featuretextwithbullet":["You have advantage on saving throws against poison, and you have resistance against poison damage."], "setskillproficiency":[]}]},
-  "classes":{}, "archetypes":{}}
+{"name":"halfling stout", "displayname":"halfing stout", "baserace":"halfling", "abilityscorebonuses":[{"Constitution":"1"}],
+  "features":[{"featuretextwithbullet":["You have advantage on saving throws against poison, and you have resistance against poison damage."], "setskillproficiency":[]}]}

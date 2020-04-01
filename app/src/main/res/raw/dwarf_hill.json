@@ -1,3 +1,2 @@
-{"background":{}, "races":[], "subraces":{"name":"dwarf hill", "displayname":"dwarf hill", "baserace":"dwarf", "abilityscorebonuses":[{"Wisdom":"1"}],
-  "features":[{"featuretextwithbullet":["Your hit point maximum increases by 1, and it increases by 1  every time you gain a level."], "setskillproficiency":[]}]},
-  "classes":{}, "archetypes":{}}
+{"name":"dwarf hill", "displayname":"dwarf hill", "baserace":"dwarf", "abilityscorebonuses":[{"Wisdom":"1"}],
+  "features":[{"featuretextwithbullet":["Your hit point maximum increases by 1, and it increases by 1  every time you gain a level."], "setskillproficiency":[]}]}

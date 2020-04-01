@@ -1,4 +1,3 @@
-{"background":{}, "races":[{"abilityscorebonuses":[{"Charisma":"1","Constitution":"1","Dexterity":"1","Intelligence":"1","Strength":"1","Wisdom":"1"}],
+{"abilityscorebonuses":[{"Charisma":"1","Constitution":"1","Dexterity":"1","Intelligence":"1","Strength":"1","Wisdom":"1"}],
                             "name":"human", "displayname":"human", "features":[{"featuretextwithbullet":[], "setskillproficiency":[]}],
-                            "languages":["Common","One Extra Language"], "speed":"30"}],
-  "subraces":{}, "classes":{}, "archetypes":{}}
+                            "languages":["Common","One Extra Language"], "speed":"30"}
