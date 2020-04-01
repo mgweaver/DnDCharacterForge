@@ -74,19 +74,19 @@ public class Character {
     }
 
     public Character(){
-        races.add(new Race());
-        classes = new PlayerClass();
-        archetypes = new Archetypes();
-        backgrounds = new Backgroud();
-        name = "Mitchell";
-        inventory.add("Longsword");
-        level = "1";
-        hp = "12";
-        strength = "18";
-        constitution = "16";
-        dexterity = "14";
-        intelligence = "12";
-        wisdom = "10";
-        charisma = "12";
+//        races.add(new Race());
+//        classes = new PlayerClass();
+//        archetypes = new Archetypes();
+//        backgrounds = new Backgroud();
+//        name = "Mitchell";
+//        inventory.add("Longsword");
+//        level = "1";
+//        hp = "12";
+//        strength = "18";
+//        constitution = "16";
+//        dexterity = "14";
+//        intelligence = "12";
+//        wisdom = "10";
+//        charisma = "12";
     }
 }
