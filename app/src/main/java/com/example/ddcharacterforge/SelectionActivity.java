@@ -12,7 +12,7 @@ public class SelectionActivity extends AppCompatActivity {
     // Create a sample character
     public Character testCharacter = new Character();
     private LinearLayout characterListLayout;
-    public static final String CHAR_NAME_TEXT = "com.example.ddcharactergorge.charName";
+    public static final String CHAR_NAME_TEXT = "com.example.ddcharacterforge.charName";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
