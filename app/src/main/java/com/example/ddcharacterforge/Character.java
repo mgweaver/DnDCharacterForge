@@ -93,7 +93,7 @@ public class Character {
 //        races.add(new Race());
 //        classes = new PlayerClass();
 //        archetypes = new Archetypes();
-//        backgrounds = new Backgroud();
+//        backgrounds = new Background();
 //        name = "Mitchell";
 //        inventory.add("Longsword");
 //        level = "1";
