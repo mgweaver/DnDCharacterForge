@@ -1,9 +1,10 @@
 package com.example.ddcharacterforge;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Race {
+public class Race implements Serializable {
     private String name;
     private String displayname;
     private List<AbilityScoreBonuses> abilityscorebonuses = new ArrayList<>();

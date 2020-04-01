@@ -1,10 +1,11 @@
 package com.example.ddcharacterforge;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Backgroud {
+public class Backgroud implements Serializable {
     private String backgroundname;
     private String backgroundfeature;
     private List<String> languages = new ArrayList<>();

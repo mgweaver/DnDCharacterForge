@@ -1,6 +1,8 @@
 package com.example.ddcharacterforge;
 
-public class AbilityScoreBonuses {
+import java.io.Serializable;
+
+public class AbilityScoreBonuses implements Serializable {
     private String Strength;
     private String Dexterity;
     private String Constitution;

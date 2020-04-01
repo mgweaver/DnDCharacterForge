@@ -1,9 +1,10 @@
 package com.example.ddcharacterforge;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Features {
+public class Features implements Serializable {
     private List<SetSkillProficiency> setskillproficiency = new ArrayList<>();
     private List<String> featuretextwithbullet = new ArrayList<>();
 

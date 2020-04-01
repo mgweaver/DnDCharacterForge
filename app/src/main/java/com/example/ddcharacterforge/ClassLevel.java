@@ -1,10 +1,11 @@
 package com.example.ddcharacterforge;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ClassLevel {
+public class ClassLevel implements Serializable {
     private List<String> level1 = new ArrayList<>();
     private List<String> level2 = new ArrayList<>();
     private List<String> level3 = new ArrayList<>();

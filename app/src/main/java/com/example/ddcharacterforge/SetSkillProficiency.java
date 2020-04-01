@@ -1,6 +1,8 @@
 package com.example.ddcharacterforge;
 
-public class SetSkillProficiency {
+import java.io.Serializable;
+
+public class SetSkillProficiency implements Serializable {
     private String Athletics;
     private String Acrobatics;
     private String Sleight_Of_Hand;

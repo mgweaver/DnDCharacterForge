@@ -1,10 +1,11 @@
 package com.example.ddcharacterforge;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class PlayerClass {
+public class PlayerClass implements Serializable {
     private String name;
     private String displayname;
     private String hitdie;
