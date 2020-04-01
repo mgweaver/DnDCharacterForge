@@ -27,6 +27,8 @@ public class StatsActivity extends AppCompatActivity {
         String charName = intent.getStringExtra(SelectionActivity.CHAR_NAME_TEXT);
         Character charToDisplay;
 
+        // This huge block will get the right character and save it to charToDisplay
+        // Ex. Use textview123.setText(charToDisplay.getName()) to display name
         if (Character.myCharacters.size() > 4) {
             for (int i = 4; i > 0; i--) {
                 if (charName == Character.myCharacters.get(i).getName()) {
@@ -60,6 +62,7 @@ public class StatsActivity extends AppCompatActivity {
                 charToDisplay = Character.myCharacters.get(0);
             }
         }
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
