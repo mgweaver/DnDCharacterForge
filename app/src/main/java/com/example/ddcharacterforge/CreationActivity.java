@@ -1,9 +1,11 @@
 package com.example.ddcharacterforge;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.Gravity;
@@ -74,6 +76,7 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
     }
 
     public void abilityScoreButton(View view){
+        newCharacter = new Character();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LinearLayout lila1= new LinearLayout(this);
         lila1.setOrientation(LinearLayout.VERTICAL);
@@ -154,7 +157,8 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
     }
 
     public void saveButton(View view){
-        TextView test = findViewById(R.id.textView13);
+
+//        TextView test = findViewById(R.id.textView13);
         EditText name = findViewById(R.id.CharacterName);
         newCharacter.setName(name.getText().toString());
 
@@ -162,11 +166,11 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
 
         Gson gson = new Gson();
 
-        newCharacter.classes = gson.fromJson(getJSON("fighter"), PlayerClass.class);
-        newCharacter.races = gson.fromJson(getJSON("human"), Race.class);
-        newCharacter.backgrounds = gson.fromJson(getJSON("acolyte"), Backgroud.class);
+        newCharacter.classes = gson.fromJson(getJSON(playerclass), PlayerClass.class);
+        newCharacter.races = gson.fromJson(getJSON(race), Race.class);
+        newCharacter.backgrounds = gson.fromJson(getJSON(background), Backgroud.class);
         String characterJSON = gson.toJson(newCharacter);
-        test.setText(characterJSON);
+//        test.setText(characterJSON);
         Character.myCharacters.add(newCharacter);
     }
 
@@ -175,20 +179,19 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         String text = parent.getItemAtPosition(position).toString();
         String stringofparent = parent.toString();
         String lasttwo = stringofparent.substring(stringofparent.length() - 2);
-        TextView spinnertest = findViewById(R.id.textView13);
-        spinnertest.setText(text);
-        String races = "s}";
-        if("s}" == lasttwo){
+
+
+        if("s}".equals(lasttwo)){
             playerclass = text;
-            spinnertest.setText("playerclass");
+
         }
-        if(lasttwo == "e}"){
+        if("e}".equals(lasttwo)){
             race = text;
-            spinnertest.setText("races");
+
         }
-        if(lasttwo == "d}"){
+        if("d}".equals(lasttwo)){
             background = text;
-            spinnertest.setText("background");
+
         }
 
     }
