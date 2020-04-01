@@ -33,6 +33,7 @@ public class StatsActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
+        tabs.getTabAt(1).select();
         FloatingActionButton fab = findViewById(R.id.fab);
 
     }
