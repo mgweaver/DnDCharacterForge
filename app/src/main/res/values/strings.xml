@@ -5,4 +5,10 @@
     <string name="d20">D20</string>
     <string name="d12">D12</string>
     <string name="test_dice_activity">Test Dice Activity</string>
+    <string name="title_activity_stats">StatsActivity</string>
+    <string name="tab_text_1">Inventory</string>
+    <string name="tab_text_2">Stats</string>
+    <string name="tab_text_3">Skills</string>
+
+
 </resources>

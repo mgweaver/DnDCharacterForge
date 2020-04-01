@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DnD_backgrounds">
+        <item>Acolyte</item>
+        <item>Charlatan</item>
+        <item>Criminal</item>
+        <item>Entertainer</item>
+        <item>Folk Hero</item>
+        <item>Gladiator</item>
+        <item>Guild Artisan</item>
+        <item>Hermit</item>
+        <item>Knight </item>
+        <item>Noble </item>
+        <item>Outlander</item>
+        <item>Pirate</item>
+        <item>Sage</item>
+        <item>Sailor</item>
+        <item>Soldier</item>
+        <item>Urchin</item>
+    </string-array>
+</resources>

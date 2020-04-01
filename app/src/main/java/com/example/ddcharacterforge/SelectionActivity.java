@@ -34,7 +34,7 @@ public class SelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_selection);
 
 
-        Button selectChar = findViewById(R.id.sampleCharacter);
+        Button selectChar = findViewById(R.id.selectionButton);
         selectChar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,6 +94,11 @@ public class SelectionActivity extends AppCompatActivity {
 
     public void creationButton(View view) {
         Intent intent = new Intent(this, CreationActivity.class);
+        startActivity(intent);
+    }
+
+    public void statsButton(View view){
+        Intent intent = new Intent(this, StatsActivity.class);
         startActivity(intent);
     }
 }
