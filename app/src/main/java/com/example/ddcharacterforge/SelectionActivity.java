@@ -1,19 +1,25 @@
 package com.example.ddcharacterforge;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.Image;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ScrollView;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -24,70 +30,49 @@ import java.io.Reader;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.io.Writer;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
 public class SelectionActivity extends AppCompatActivity {
-    Character test;
+
+    public Character testCharacter = new Character();
+    private LinearLayout characterListLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
 
+        //characterListLayout = findViewById(R.id.characterList);
 
-        Button selectChar = findViewById(R.id.selectionButton);
-        selectChar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loadJSON();
-            }
-        });;
-    }
+        findViewById(R.id.button4).setVisibility(View.INVISIBLE);
+        findViewById(R.id.button5).setVisibility(View.INVISIBLE);
+        findViewById(R.id.button6).setVisibility(View.INVISIBLE);
+        findViewById(R.id.button7).setVisibility(View.INVISIBLE);
+        findViewById(R.id.button9).setVisibility(View.INVISIBLE);
 
-    private void loadJSON() {
-        InputStream is = getResources().openRawResource(R.raw.testcharacter);
-        Writer writer = new StringWriter();
-        char[] buffer = new char[1024];
-        try {
-            Reader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-            int n;
-            while ((n = reader.read(buffer)) != -1) {
-                writer.write(buffer, 0, n);
-            }
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                is.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        Character.myCharacters.add(testCharacter);
+
+        if (Character.myCharacters.size() != 0)
+        {
+            findViewById(R.id.button4).setVisibility(View.VISIBLE);
         }
-
-        String jsonString = writer.toString();
-        TextView result = findViewById(R.id.textView7);
-        result.setText(jsonString);
-
-        Character test2 = new Character();
-
-        Gson gson = new Gson();
-        String characterJSON = gson.toJson(test2);
-        result.setText(characterJSON);
-
-        try {
-            FileOutputStream fileout = openFileOutput("test_JSON", MODE_PRIVATE);
-            OutputStreamWriter outputWriter = new OutputStreamWriter(fileout);
-            outputWriter.write(characterJSON);
-            outputWriter.close();
-
-            Toast.makeText(getBaseContext(), "File saved successfully!",
-                    Toast.LENGTH_SHORT).show();
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (Character.myCharacters.size() > 1)
+        {
+            findViewById(R.id.button5).setVisibility(View.VISIBLE);
+        }
+        if (Character.myCharacters.size() > 2)
+        {
+            findViewById(R.id.button6).setVisibility(View.VISIBLE);
+        }
+        if (Character.myCharacters.size() > 3)
+        {
+            findViewById(R.id.button7).setVisibility(View.VISIBLE);
+        }
+        if (Character.myCharacters.size() > 4)
+        {
+            findViewById(R.id.button9).setVisibility(View.VISIBLE);
         }
 
     }
@@ -101,4 +86,5 @@ public class SelectionActivity extends AppCompatActivity {
         Intent intent = new Intent(this, StatsActivity.class);
         startActivity(intent);
     }
+
 }
