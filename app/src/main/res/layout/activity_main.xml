@@ -13,12 +13,12 @@
         android:layout_height="108dp"
         android:onClick="creationButton"
         android:text="Create"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/SelectButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.398"
+        app:layout_constraintVertical_bias="0.775"
         tools:text="Create" />
 
     <Button
@@ -40,13 +40,15 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="D&amp;D Character Forge"
+        android:textAllCaps="true"
+        android:textColor="#000000"
         android:textSize="36sp"
         app:fontFamily="@font/goblin_one"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/CreateButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.103" />
+        app:layout_constraintVertical_bias="0.295" />
 
     <Button
         android:id="@+id/button"
