@@ -45,6 +45,15 @@ public class CreationActivity extends AppCompatActivity {
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         playerClasses.setAdapter(adapter2);
+
+        Spinner backgrounds = (Spinner) findViewById(R.id.background);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this,
+                R.array.DnD_backgrounds, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        backgrounds.setAdapter(adapter3);
     }
 
     public void abilityScoreButton(View view){
@@ -129,6 +138,8 @@ public class CreationActivity extends AppCompatActivity {
 
     public void saveButton(View view){
         TextView test = findViewById(R.id.textView13);
+        EditText name = findViewById(R.id.CharacterName);
+        newCharacter.setName(name.getText().toString());
 
         Gson gson = new Gson();
         String characterJSON = gson.toJson(newCharacter);
