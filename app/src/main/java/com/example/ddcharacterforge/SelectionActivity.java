@@ -54,16 +54,46 @@ public class SelectionActivity extends AppCompatActivity {
         }
     }
 
-    // Button to CreationActivity
+    // Intent to CreationActivity
     public void creationButton(View view) {
         Intent intent = new Intent(this, CreationActivity.class);
         startActivity(intent);
     }
 
-    //Button to StatsActivity
-    public void statsButton(View view){
+    // Intents to StatsActivity
+    public void statsButtonChar1(View view){
+        String charName = Character.myCharacters.get(0).getName();
+
         Intent intent = new Intent(this, StatsActivity.class);
+        intent.putExtra("charName1", charName);
         startActivity(intent);
     }
+    public void statsButtonChar2(View view){
+        String charName = Character.myCharacters.get(1).getName();
 
+        Intent intent = new Intent(this, StatsActivity.class);
+        intent.putExtra("charName", charName);
+        startActivity(intent);
+    }
+    public void statsButtonChar3(View view){
+        String charName = Character.myCharacters.get(2).getName();
+
+        Intent intent = new Intent(this, StatsActivity.class);
+        intent.putExtra("charName", charName);
+        startActivity(intent);
+    }
+    public void statsButtonChar4(View view){
+        String charName = Character.myCharacters.get(3).getName();
+
+        Intent intent = new Intent(this, StatsActivity.class);
+        intent.putExtra("charName", charName);
+        startActivity(intent);
+    }
+    public void statsButtonChar5(View view){
+        String charName = Character.myCharacters.get(4).getName();
+
+        Intent intent = new Intent(this, StatsActivity.class);
+        intent.putExtra("charName", charName);
+        startActivity(intent);
+    }
 }
