@@ -25,6 +25,41 @@ public class StatsActivity extends AppCompatActivity {
         // then load that character's stats and display them
         Intent intent = getIntent();
         String charName = intent.getStringExtra(SelectionActivity.CHAR_NAME_TEXT);
+        Character charToDisplay;
+
+        if (Character.myCharacters.size() > 4) {
+            for (int i = 4; i > 0; i--) {
+                if (charName == Character.myCharacters.get(i).getName()) {
+                charToDisplay = Character.myCharacters.get(i);
+                }
+            }
+        }
+        else if (Character.myCharacters.size() > 3) {
+            for (int i = 3; i > 0; i--) {
+                if (charName == Character.myCharacters.get(i).getName()) {
+                    charToDisplay = Character.myCharacters.get(i);
+                }
+            }
+        }
+        else if (Character.myCharacters.size() > 2) {
+            for (int i = 2; i > 0; i--) {
+                if (charName == Character.myCharacters.get(i).getName()) {
+                    charToDisplay = Character.myCharacters.get(i);
+                }
+            }
+        }
+        else if (Character.myCharacters.size() > 1) {
+            for (int i = 1; i > 0; i--) {
+                if (charName == Character.myCharacters.get(i).getName()) {
+                    charToDisplay = Character.myCharacters.get(i);
+                }
+            }
+        }
+        else if (Character.myCharacters.size() > 0) {
+            if (charName == Character.myCharacters.get(0).getName()) {
+                charToDisplay = Character.myCharacters.get(0);
+            }
+        }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
