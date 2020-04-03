@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DnD_Subraces_Elf">
+        <item>elf_drow</item>
+        <item>elf_high</item>
+        <item>elf_wood</item>
+    </string-array>
+</resources>

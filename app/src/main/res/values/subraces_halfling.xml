@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DnD_Subraces_halfling">
+        <item>halfling_stout</item>
+        <item>halfling_lightfoot</item>
+    </string-array>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DnD_Subraces_gnome">
+        <item>forest_gnome</item>
+        <item>rock_gnome</item>
+    </string-array>
+</resources>

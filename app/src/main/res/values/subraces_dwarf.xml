@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DnD_Subraces_dwarf">
+        <item>dwarf_hill</item>
+        <item>dwarf_mountain</item>
+    </string-array>
+</resources>
