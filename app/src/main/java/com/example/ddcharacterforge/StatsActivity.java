@@ -97,20 +97,20 @@ public class StatsActivity extends AppCompatActivity {
 
     }
 
-//    public void initStats(Character charToDisplay, TextView displayName, EditText displayStrength, EditText displayDexterity, EditText displayConstitution, EditText displayCharisma, EditText displayIntelligence, EditText displayWisdom) {
-//        displayName.setText(charToDisplay.getName());
-//        // displayArmorClass.setText(charToDisplay.getArmorClass());
-//        // displayHP.setText(charToDisplay.getHP());
-//        // displayWalkingSpeed.setText(getWalkingSpeed());
-//        // displayProficiency.setText(charToDisplay.getProficiency());
-//        // displayInitiative.setText(charToDisplay.getInitiative());
-//        displayStrength.setText(charToDisplay.getStrength());
-//        displayDexterity.setText(charToDisplay.getDexterity());
-//        displayConstitution.setText(charToDisplay.getConstitution());
-//        displayCharisma.setText(charToDisplay.getCharisma());
-//        displayIntelligence.setText(charToDisplay.getIntelligence());
-//        displayWisdom.setText(charToDisplay.getWisdom());
-//    }
+    public void initStats(Character charToDisplay, TextView displayName, EditText displayStrength, EditText displayDexterity, EditText displayConstitution, EditText displayCharisma, EditText displayIntelligence, EditText displayWisdom) {
+        displayName.setText(charToDisplay.getName());
+        // displayArmorClass.setText(charToDisplay.getArmorClass());
+        // displayHP.setText(charToDisplay.getHP());
+        // displayWalkingSpeed.setText(getWalkingSpeed());
+        // displayProficiency.setText(charToDisplay.getProficiency());
+        // displayInitiative.setText(charToDisplay.getInitiative());
+        displayStrength.setText(charToDisplay.getStrength());
+        displayDexterity.setText(charToDisplay.getDexterity());
+        displayConstitution.setText(charToDisplay.getConstitution());
+        displayCharisma.setText(charToDisplay.getCharisma());
+        displayIntelligence.setText(charToDisplay.getIntelligence());
+        displayWisdom.setText(charToDisplay.getWisdom());
+    }
 
     public void diceButton(View view) {
         Intent intent = new Intent(this, DiceActivity.class);
