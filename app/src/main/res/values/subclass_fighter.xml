@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DnD_Subclasses_fighter">
+        <item>fighter_battle_master</item>
+        <item>fighter_champion</item>
+        <item>fighter_eldritch_knight</item>
+    </string-array>
+</resources>

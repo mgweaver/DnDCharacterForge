@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DnD_Subclasses_rogue">
+        <item>rogue_arcane_trickster</item>
+        <item>rogue_assassin</item>
+        <item>rogue_thief</item>
+    </string-array>
+</resources>

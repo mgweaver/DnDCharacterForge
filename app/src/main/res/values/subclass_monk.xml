@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DnD_Subclasses_monk">
+        <item>monk_way_of_shadow</item>
+        <item>monk_way_of_the_four_elements</item>
+        <item>monk_way_of_the_open_hand</item>
+    </string-array>
+</resources>

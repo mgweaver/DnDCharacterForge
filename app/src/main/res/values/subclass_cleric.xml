@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DnD_Subclasses_cleric">
+        <item>cleric_knowledge</item>
+        <item>cleric_life</item>
+        <item>cleric_light</item>
+        <item>cleric_nature</item>
+        <item>cleric_tempest</item>
+        <item>cleric_trickery</item>
+        <item>cleric_war</item>
+    </string-array>
+</resources>

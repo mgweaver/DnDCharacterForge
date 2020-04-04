@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DnD_Subclasses_wizard">
+        <item>wizard_abjuration</item>
+        <item>wizard_conjuration</item>
+        <item>wizard_divination</item>
+        <item>wizard_enchantment</item>
+        <item>wizard_evocation</item>
+        <item>wizard_illusion</item>
+        <item>wizard_necromancy</item>
+        <item>wizard_transmutation</item>
+    </string-array>
+</resources>

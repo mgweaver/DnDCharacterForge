@@ -75,10 +75,12 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         races.setOnItemSelectedListener(this);
         playerClasses.setOnItemSelectedListener(this);
         backgrounds.setOnItemSelectedListener(this);
+
+        newCharacter = new Character();
     }
 
+    //Builds a pop up dialog that has edit boxes to enter in your ability scores
     public void abilityScoreButton(View view){
-        newCharacter = new Character();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LinearLayout lila1= new LinearLayout(this);
         lila1.setOrientation(LinearLayout.VERTICAL);
@@ -91,6 +93,7 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
 // Specify the type of input expected;
         str.setInputType(InputType.TYPE_CLASS_NUMBER);
 
+        //Now we do the same for the other five ability scores
         final EditText dex = new EditText(this);
         final TextView dexterity = new TextView(this);
         dex.setInputType(InputType.TYPE_CLASS_NUMBER);
@@ -116,6 +119,8 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         chari.setInputType(InputType.TYPE_CLASS_NUMBER);
         charisma.setText("Charisma");
 
+        //Once all of the edit and text views are created we need to add them to layout and then the
+        //dialog builder
         lila1.addView(str);
         lila1.addView(strength);
 
@@ -140,6 +145,7 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                //Sets each of the ability scores for the new Character based off what was entered.
                 newCharacter.setStrength(str.getText().toString());
                 newCharacter.setDexterity(dex.getText().toString());
                 newCharacter.setConstitution(con.getText().toString());
@@ -188,24 +194,29 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         String stringofparent = parent.toString();
         String lasttwo = stringofparent.substring(stringofparent.length() - 2);
 
+        //Checks to see which spinner called this function
         if("s}".equals(lasttwo)){
             playerclass = text;
         }
         if("e}".equals(lasttwo)){
             race = text;
+            //When we select our race we want to check to see if there is a subrace.
             subrace();
         }
         if("d}".equals(lasttwo)){
             background = text;
         }
+        //This is the spinner for subrace
         if("4}".equals(lasttwo)){
             subrace = text;
         }
+
 
     }
     @Override
     public void onNothingSelected(AdapterView<?> parent) { }
 
+    //This function reads in the json file and sends it back as a string
     public String getJSON(String jsonfile){
         int resid = getResources().getIdentifier(jsonfile, "raw", this.getPackageName());
 
@@ -243,9 +254,12 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         name.setText(randomName);
     }
 
+    //If the race that was selected is one that has subraces it creates a dialog box to choice from
+    //Dwarf, Elf, Halfling, and Gnome are the subraces from the Player's Handbook.
     public void subrace(){
         if(race.equals("dwarf") || race.equals("elf") || race.equals("halfling") || race.equals("gnome")){
 
+            //Just like the ability score button we build a dialog
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             LinearLayout lila1= new LinearLayout(this);
             lila1.setOrientation(LinearLayout.VERTICAL);

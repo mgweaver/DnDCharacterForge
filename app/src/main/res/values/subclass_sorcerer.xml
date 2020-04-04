@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DnD_Subclasses_sorcerer">
+        <item>sorcerer_draconic_bloodline</item>
+        <item>sorcerer_wild_magic</item>
+    </string-array>
+</resources>

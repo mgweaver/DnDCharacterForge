@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DnD_Subclasses_ranger">
+        <item>ranger_beast_master</item>
+        <item>ranger_hunter</item>
+    </string-array>
+</resources>

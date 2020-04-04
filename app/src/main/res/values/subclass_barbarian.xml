@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string-array name="DnD_Subclasses_barbarian">
+        <item>barbarian_berserker</item>
+        <item>barbarian_totem_warrior</item>
+    </string-array>
+</resources>

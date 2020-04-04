@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DnD_Subclasses_bard">
+        <item>bard_lore</item>
+        <item>bard_valor</item>
+    </string-array>
+</resources>
