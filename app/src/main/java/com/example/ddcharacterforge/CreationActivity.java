@@ -38,6 +38,7 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
     String race;
     String playerclass;
     String background;
+    String subrace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -159,19 +160,25 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
 
     public void saveButton(View view){
 
-//        TextView test = findViewById(R.id.textView13);
+//        TextView test = findViewById(R.id.textView27);
         EditText name = findViewById(R.id.CharacterName);
+
+        //Sets the new character's name
         newCharacter.setName(name.getText().toString());
-
-
 
         Gson gson = new Gson();
 
+        //Sets the class, race and background for the new character
+        //Reads in from the corresponding json file and puts it into the newCharacter object
         newCharacter.classes = gson.fromJson(getJSON(playerclass), PlayerClass.class);
         newCharacter.races = gson.fromJson(getJSON(race), Race.class);
         newCharacter.backgrounds = gson.fromJson(getJSON(background), Backgroud.class);
+
+        //For testing purposes
         String characterJSON = gson.toJson(newCharacter);
 //        test.setText(characterJSON);
+
+        //Adds the new character to list of characters created
         Character.myCharacters.add(newCharacter);
     }
 
@@ -181,18 +188,18 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         String stringofparent = parent.toString();
         String lasttwo = stringofparent.substring(stringofparent.length() - 2);
 
-
         if("s}".equals(lasttwo)){
             playerclass = text;
-
         }
         if("e}".equals(lasttwo)){
             race = text;
-
+            subrace();
         }
         if("d}".equals(lasttwo)){
             background = text;
-
+        }
+        if("4}".equals(lasttwo)){
+            subrace = text;
         }
 
     }
@@ -234,6 +241,75 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         String[] listOfNames = getResources().getStringArray(R.array.RandomNames);
         String randomName = listOfNames[new Random().nextInt(listOfNames.length)] + " " + listOfNames[new Random().nextInt(listOfNames.length)];
         name.setText(randomName);
+    }
+
+    public void subrace(){
+        if(race.equals("dwarf") || race.equals("elf") || race.equals("halfling") || race.equals("gnome")){
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            LinearLayout lila1= new LinearLayout(this);
+            lila1.setOrientation(LinearLayout.VERTICAL);
+            builder.setTitle("Choose your subrace");
+
+            Spinner subrac = new Spinner(this);
+
+            if(race.equals("dwarf")){
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.DnD_Subraces_dwarf, android.R.layout.simple_spinner_item);
+                // Specify the layout to use when the list of choices appears
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                // Apply the adapter to the spinner
+                subrac.setAdapter(adapter);
+            }
+
+            if(race.equals("elf")){
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.DnD_Subraces_Elf, android.R.layout.simple_spinner_item);
+                // Specify the layout to use when the list of choices appears
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                // Apply the adapter to the spinner
+                subrac.setAdapter(adapter);
+            }
+
+            if(race.equals("halfling")){
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.DnD_Subraces_halflings, android.R.layout.simple_spinner_item);
+                // Specify the layout to use when the list of choices appears
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                // Apply the adapter to the spinner
+                subrac.setAdapter(adapter);
+            }
+
+            if(race.equals("gnome")){
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.DnD_Subraces_gnome, android.R.layout.simple_spinner_item);
+                // Specify the layout to use when the list of choices appears
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                // Apply the adapter to the spinner
+                subrac.setAdapter(adapter);
+            }
+
+            subrac.setOnItemSelectedListener(this);
+
+            lila1.addView(subrac);
+            builder.setView(lila1);
+
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Gson gson = new Gson();
+                    newCharacter.subraces = gson.fromJson(getJSON(subrace), Subraces.class);
+                }
+            });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+
+            builder.show();
+        }
     }
 }
 
