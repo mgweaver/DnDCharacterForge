@@ -31,6 +31,7 @@ import java.io.Reader;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.io.Writer;
+import java.util.Random;
 
 public class CreationActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     Character newCharacter = new Character();
@@ -225,4 +226,14 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         String jsonString = writer.toString();
         return jsonString;
     }
+
+    //Randomly selects a name and puts in the edit box for names.
+    public void randomNameButton(View view){
+        EditText name = findViewById(R.id.CharacterName);
+        //Creates an array out of all of the Players Handbook suggested names.
+        String[] listOfNames = getResources().getStringArray(R.array.RandomNames);
+        String randomName = listOfNames[new Random().nextInt(listOfNames.length)] + " " + listOfNames[new Random().nextInt(listOfNames.length)];
+        name.setText(randomName);
+    }
 }
+
