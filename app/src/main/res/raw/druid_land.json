@@ -1,0 +1,10 @@
+{"baseclass":"druid","displayname":"land","level1":[],"level10":["Nature's Ward - You can’t be charmed or frightened by elementals or fey, and you are immune to poison and disease."],
+  "level11":[],"level12":[],
+  "level13":[],"level14":["Nature's Sanctuary - Creatures of the natural world sense your connection to nature and become hesitant to attack you. When a beast or plant creature attacks you, that creature must make a Wisdom saving throw against your druid spell save DC. On a failed save, the creature must choose a different target, or the attack automatically misses. On a successful save, the creature is immune to this effect for 24 hours.The creature is aware of this effect before it makes its attack against you."],
+  "level15":[],"level16":[],"level17":[],
+  "level18":[],
+  "level19":[],"level2":["Cantrips - You learn one additional druid cantrip of your choice.", "Natural Recovery - You can regain som e of your magical energy by sitting in meditation and communing with nature. During a short rest, you choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your druid level (rounded up), and none of the slots can be 6th level or higher. You can’t use this feature again until you finish a long rest.", "Circle Spells - You gain spells connected to where you became a Druid. (See rules)."],
+  "level20":[],"level3":[],
+  "level4":[],"level5":[],"level6":["Land's Stride - Moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard. In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the entangle spell."],
+  "level7":[],
+  "level8":[],"level9":[],"name":"land"}

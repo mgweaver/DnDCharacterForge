@@ -1,0 +1,10 @@
+{"baseclass":"cleric","displayname":"light","level1":["Light Domain Spells - See the book.", "Bonus Cantrip - You gain the light cantrip if you don't already have it.", "Warding Flare - You can interpose divine light between yourself and an attacking enemy. When you are attacked by a creature within 30 feet of you that you can see, you can use your reaction to impose disadvantage on the attack roll, causing light to flare before the attacker before it hits or misses. An attacker that can’t be blinded is immune to this feature.You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."],"level10":[],
+  "level11":[],"level12":[],
+  "level13":[],"level14":[],
+  "level15":[],"level16":[],"level17":["Corona of Light - You can use your action to activate an aura of sunlight that lasts for 1  minute or until you dismiss it using another action. You emit bright light in a 60-foot radius and dim light 30 feet beyond that. Your enemies in the bright light have disadvantage on saving throws against any spell that deals fire or radiant damage."],
+  "level18":[],
+  "level19":[],"level2":["Channel Divinity - As an action, you present your holy symbol, and any magical darkness within 30 feet of you is dispelled. Additionally, each hostile creature within 30 feet of you must make a Constitution saving throw. A creature takes radiant damage equal to 2d10 + your cleric level on a failed saving throw, and half as much damage on a successful one. A creature that has total cover from you is not affected."],
+  "level20":[],"level3":[],
+  "level4":[],"level5":[],"level6":["Improved Flare - You can also use your Warding Flare feature when a creature that you can see within 30 feet of you attacks a creature other than you."],
+  "level7":[],
+  "level8":["Potent Spellcasting - You add your Wisdom modifier to the damage you deal with any cleric cantrip."],"level9":[],"name":"light"}

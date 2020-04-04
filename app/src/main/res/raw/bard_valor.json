@@ -1,0 +1,10 @@
+{"baseclass":"bard","displayname":"valor","level1":[],"level10":[],
+  "level11":[],"level12":[],
+  "level13":[],"level14":["Battle Magic - You have mastered the art of weaving spellcasting and weapon use into a single harmonious act. When you use your action to cast a bard spell, you can make one weapon attack as a bonus action."],
+  "level15":[],"level16":[],"level17":[],
+  "level18":[],
+  "level19":[],"level2":[],
+  "level20":[],"level3":["Combat Inspiration - You learn to inspire others in battle.A creature that has a Bardic Inspiration die from you can roll that die and add the number rolled to a weapon damage roll it just made. Alternatively, when an attack roll is made against the creature, it can use its reaction to roll the Bardic Inspiration die and add the number rolled to its AC against that attack, after seeing the roll but before knowing whether it hits or misses."],
+  "level4":[],"level5":[],"level6":["Extra Attack - You can attack twice whenever you take the Attack action on your turn."],
+  "level7":[],
+  "level8":[],"level9":[],"name":"valor"}

@@ -1,0 +1,10 @@
+{"baseclass":"druid","displayname":"moon","level1":[],"level10":["Elemental Wild Shape - You can expend two uses of Wild Shape at the same time to transform into an air elemental, an earth elemental, a fire elemental, or a water elemental."],
+  "level11":[],"level12":[],
+  "level13":[],"level14":["Thousand Forms - You can cast the alter self spell at will."],
+  "level15":[],"level16":[],"level17":[],
+  "level18":[],
+  "level19":[],"level2":["Combat Wild Shape - You gain the ability to use Wild Shape on your turn as a bonus action, rather than as an action. Additionally, while you are transformed by Wild Shape, you can use a bonus action to expend one spell slot to regain 1d8 hit points per level of the spell slot expended.", "Circle Forms - You can use your W ild Shape to transform into a beast with a challenge rating as high as 1  (you ignore the Max. CR column of the Beast Shapes table, but must abide by the other limitations there).Starting at 6th level, you can transform into a beast with a challenge rating as high as your druid level divided by 3, rounded down."],
+  "level20":[],"level3":[],
+  "level4":[],"level5":[],"level6":["Primal Strike - Your attacks in beast form count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."],
+  "level7":[],
+  "level8":[],"level9":[],"name":"moon"}
