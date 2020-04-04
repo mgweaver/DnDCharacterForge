@@ -195,6 +195,7 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         String lasttwo = stringofparent.substring(stringofparent.length() - 2);
 
         //Checks to see which spinner called this function
+        //This are the last two characters in each of the spinner's id's
         if("s}".equals(lasttwo)){
             playerclass = text;
         }
@@ -255,7 +256,7 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
     }
 
     //If the race that was selected is one that has subraces it creates a dialog box to choice from
-    //Dwarf, Elf, Halfling, and Gnome are the subraces from the Player's Handbook.
+    //Dwarf, Elf, Halfling, and Gnome are the races that have subraces from the Player's Handbook.
     public void subrace(){
         if(race.equals("dwarf") || race.equals("elf") || race.equals("halfling") || race.equals("gnome")){
 
