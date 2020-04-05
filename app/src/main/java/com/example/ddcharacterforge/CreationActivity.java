@@ -5,6 +5,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
@@ -187,6 +188,10 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
 
         //Adds the new character to list of characters created
         Character.myCharacters.add(newCharacter);
+
+        //Takes you to the Selection Activity
+        Intent intent = new Intent(this, SelectionActivity.class);
+        startActivity(intent);
     }
 
     @Override
@@ -334,6 +339,8 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         }
     }
 
+    //If the class needs to select a subclass at level one a dialog box is created and displayed
+    //this is all done just like the subrace function.
     public void subclass(){
         if(playerclass.equals("cleric") || playerclass.equals("sorcerer") || playerclass.equals("warlock")){
             //Just like the ability score button we build a dialog
@@ -397,6 +404,73 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
 
             builder.show();
         }
+    }
+
+    //This will randomly select a name, race, class, background, and ability scores.
+    public void randomCharacterButton(View view){
+        Gson gson = new Gson();
+
+        String[] listOfNames = getResources().getStringArray(R.array.RandomNames);
+        String randomName = listOfNames[new Random().nextInt(listOfNames.length)] + " " + listOfNames[new Random().nextInt(listOfNames.length)];
+        newCharacter.setName(randomName);
+
+        String[] listOfRaces = getResources().getStringArray(R.array.DnD_Races);
+        String randomRace = listOfRaces[new Random().nextInt(listOfRaces.length)];
+        newCharacter.races = gson.fromJson(getJSON(randomRace), Race.class);
+
+        if(randomRace.equals("dwarf") || randomRace.equals("elf") || randomRace.equals("halfling") || randomRace.equals("gnome")) {
+            if (randomRace.equals("dwarf")) {
+                String[] listOfSubrace = getResources().getStringArray(R.array.DnD_Subraces_dwarf);
+                String randomSubrace = listOfSubrace[new Random().nextInt(listOfSubrace.length)];
+                newCharacter.subraces = gson.fromJson(getJSON(randomSubrace), Subraces.class);
+            }
+            if (randomRace.equals("elf")) {
+                String[] listOfSubrace = getResources().getStringArray(R.array.DnD_Subraces_Elf);
+                String randomSubrace = listOfSubrace[new Random().nextInt(listOfSubrace.length)];
+                newCharacter.subraces = gson.fromJson(getJSON(randomSubrace), Subraces.class);
+            }
+            if (randomRace.equals("halfling")) {
+                String[] listOfSubrace = getResources().getStringArray(R.array.DnD_Subraces_halflings);
+                String randomSubrace = listOfSubrace[new Random().nextInt(listOfSubrace.length)];
+                newCharacter.subraces = gson.fromJson(getJSON(randomSubrace), Subraces.class);
+            }
+            if (randomRace.equals("gnome")) {
+                String[] listOfSubrace = getResources().getStringArray(R.array.DnD_Subraces_gnome);
+                String randomSubrace = listOfSubrace[new Random().nextInt(listOfSubrace.length)];
+                newCharacter.subraces = gson.fromJson(getJSON(randomSubrace), Subraces.class);
+            }
+        }
+
+        String[] listOfClasses = getResources().getStringArray(R.array.DnD_Classes);
+        String randomClass = listOfClasses[new Random().nextInt(listOfClasses.length)];
+        newCharacter.classes = gson.fromJson(getJSON(randomClass), PlayerClass.class);
+
+        if(randomClass.equals("cleric") || randomClass.equals("sorcerer") || randomClass.equals("warlock")){
+            if (randomClass.equals("cleric")) {
+                String[] listOfSubclasses = getResources().getStringArray(R.array.DnD_Subclasses_cleric);
+                String randomSubclass = listOfSubclasses[new Random().nextInt(listOfSubclasses.length)];
+                newCharacter.archetypes = gson.fromJson(getJSON(randomSubclass), Archetypes.class);
+            }
+            if (randomClass.equals("sorcerer")) {
+                String[] listOfSubclasses = getResources().getStringArray(R.array.DnD_Subclasses_sorcerer);
+                String randomSubclass = listOfSubclasses[new Random().nextInt(listOfSubclasses.length)];
+                newCharacter.archetypes = gson.fromJson(getJSON(randomSubclass), Archetypes.class);
+            }
+            if (randomClass.equals("warlock")) {
+                String[] listOfSubclasses = getResources().getStringArray(R.array.DnD_Subclasses_warlock);
+                String randomSubclass = listOfSubclasses[new Random().nextInt(listOfSubclasses.length)];
+                newCharacter.archetypes = gson.fromJson(getJSON(randomSubclass), Archetypes.class);
+            }
+        }
+
+        String[] listOfBackgrounds = getResources().getStringArray(R.array.DnD_backgrounds);
+        String randomBackground = listOfBackgrounds[new Random().nextInt(listOfBackgrounds.length)];
+        newCharacter.classes = gson.fromJson(getJSON(randomBackground), PlayerClass.class);
+
+        Character.myCharacters.add(newCharacter);
+
+        Intent intent = new Intent(this, SelectionActivity.class);
+        startActivity(intent);
     }
 }
 
