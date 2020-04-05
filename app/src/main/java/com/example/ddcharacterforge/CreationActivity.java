@@ -4,6 +4,8 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.FileNotFoundException;
+import java.io.Writer;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
@@ -25,9 +27,11 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
@@ -181,17 +185,34 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         newCharacter.classes = gson.fromJson(getJSON(playerclass), PlayerClass.class);
         newCharacter.races = gson.fromJson(getJSON(race), Race.class);
         newCharacter.backgrounds = gson.fromJson(getJSON(background), Backgroud.class);
-
-        //For testing purposes
-        String characterJSON = gson.toJson(newCharacter);
-//        test.setText(characterJSON);
-
         //Adds the new character to list of characters created
         Character.myCharacters.add(newCharacter);
+
+        String characterJSON = gson.toJson(Character.myCharacters);
+        try {
+            FileOutputStream fileout = openFileOutput("MyCharacters_JSON", MODE_PRIVATE);
+            OutputStreamWriter outputWriter = new OutputStreamWriter(fileout);
+            outputWriter.write(characterJSON);
+            outputWriter.close();
+
+            Toast.makeText(getBaseContext(), "File saved successfully!",
+                    Toast.LENGTH_SHORT).show();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
         //Takes you to the Selection Activity
         Intent intent = new Intent(this, SelectionActivity.class);
         startActivity(intent);
+
+
+
+
+
     }
 
     @Override
