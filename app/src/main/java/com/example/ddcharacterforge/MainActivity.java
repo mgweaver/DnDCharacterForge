@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    // Intent to Creation Activity
     public void creationButton(View view){
         Intent intent = new Intent(this, CreationActivity.class);
         //EditText editText = (EditText) findViewById(R.id.editText);
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    // Intent to SelectionActivity
     public void selectButton(View view){
         Intent intent = new Intent(this, SelectionActivity.class);
         //EditText editText = (EditText) findViewById(R.id.editText);
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    // Intent to DiceActivity
     public void diceButton(View view) {
         Intent intent = new Intent(this, DiceActivity.class);
         startActivity(intent);

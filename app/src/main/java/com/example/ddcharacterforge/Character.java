@@ -8,7 +8,7 @@ import java.util.List;
 public class Character {
     // in Creation/Selection activities, use 'Character.myCharacters' to reference
     public static List<Character> myCharacters = new ArrayList<>();
-    
+
     private String name;
     public Race races;
     public Subraces subraces;

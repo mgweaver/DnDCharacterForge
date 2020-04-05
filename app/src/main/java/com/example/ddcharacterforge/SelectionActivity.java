@@ -54,6 +54,29 @@ public class SelectionActivity extends AppCompatActivity {
         }
     }
 
+    // ARRAY VERSION
+//        if (Character.myCharacters[0] != null)
+//        {
+//            findViewById(R.id.button4).setVisibility(View.VISIBLE);
+//        }
+//        if (Character.myCharacters[1] != null)
+//        {
+//            findViewById(R.id.d20).setVisibility(View.VISIBLE);
+//        }
+//        if (Character.myCharacters[2] != null)
+//        {
+//            findViewById(R.id.button6).setVisibility(View.VISIBLE);
+//        }
+//        if (Character.myCharacters[3] != null)
+//        {
+//            findViewById(R.id.button7).setVisibility(View.VISIBLE);
+//        }
+//        if (Character.myCharacters[4] != null)
+//        {
+//            findViewById(R.id.button9).setVisibility(View.VISIBLE);
+//        }
+//}
+
     // Intent to CreationActivity
     public void creationButton(View view) {
         Intent intent = new Intent(this, CreationActivity.class);
