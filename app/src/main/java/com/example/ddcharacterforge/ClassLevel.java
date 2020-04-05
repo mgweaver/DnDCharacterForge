@@ -30,7 +30,7 @@ public class ClassLevel implements Serializable {
     public ClassLevel(){
 //        level1.add("Choose a fighting style: Archery, Defence, Dueling, Great Weapon Fighting, Protection, Two-Weapon Fighting");
 //        level2.addAll(Arrays.asList("Second Wind -  On your turn, you can use a bonus action to regain " +
-//                "hit points equal to ld10 +your fighter leveI. Once you use this feature, you must finish a " +
+//                "hit points equal to ld10 +your fighter level 1. Once you use this feature, you must finish a " +
 //                "short or long rest before you can use it again.", "Action Surge -  On your turn, you can " +
 //                "take one additional action on top of your regular action and a possible bonus action."));
 //        level3.add("Choose a Martial Archetype");
@@ -45,7 +45,7 @@ public class ClassLevel implements Serializable {
 //        level12.add("Ability Score Improvement");
 //        level13.add("Indomitable - You can use this feature twice between long rests.");
 //        level14.add("Ability Score Improvement");
-//        level16.add("Ability Score Imporvement");
+//        level16.add("Ability Score Improvement");
 //        level17.add("Indomitable - You can use this feature three times between long rests.");
 //        level19.add("Ability Score Improvement");
 //        level20.add("Extra Attack - You can attack four times when you take the attack action.");
