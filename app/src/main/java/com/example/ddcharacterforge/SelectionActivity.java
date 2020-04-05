@@ -29,8 +29,9 @@ public class SelectionActivity extends AppCompatActivity {
         findViewById(R.id.button9).setVisibility(View.INVISIBLE);
 
         // Add test character to ArrayList of character objects
-        Character.myCharacters.add(testCharacter);
-
+        if (Character.myCharacters.size() == 0) {
+            Character.myCharacters.add(testCharacter);
+        }
         // Display buttons depending on number of character objects in myCharacters
         if (Character.myCharacters.size() != 0)
         {
