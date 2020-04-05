@@ -15,73 +15,39 @@ import android.widget.TextView;
 
 import com.example.ddcharacterforge.ui.main.SectionsPagerAdapter;
 
+import static com.example.ddcharacterforge.R.id.textView17;
+
 public class StatsActivity extends AppCompatActivity {
 
-    Character charToDisplay;
+    //Character charToDisplay;
     Character testCharacter = new Character();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        // Use this variable 'charName' to loop through myCharacters to check for a match,
-        // then load that character's stats and display them
         Intent intent = getIntent();
         String charName = intent.getStringExtra(SelectionActivity.CHAR_NAME_TEXT);
 
-        final TextView displayName = findViewById(R.id.textView17);
-        final EditText displayArmorClass = findViewById(R.id.editText4);
-        final EditText displayHP = findViewById(R.id.editText5);
-        final EditText displayWalkingSpeed = findViewById(R.id.editText6);
-        final EditText displayProficiency = findViewById(R.id.editText14);
-        final EditText displayInitiative = findViewById(R.id.editText7);
-        final EditText displayStrength = findViewById(R.id.editText8);
-        final EditText displayDexterity = findViewById(R.id.editText9);
-        final EditText displayConstitution = findViewById(R.id.editText10);
-        final EditText displayCharisma = findViewById(R.id.editText11);
-        final EditText displayIntelligence = findViewById(R.id.editText12);
-        final EditText displayWisdom = findViewById(R.id.editText13);
+        TextView displayName = findViewById(textView17);
+        EditText displayArmorClass = findViewById(R.id.editText4);
+        EditText displayHP = findViewById(R.id.editText5);
+        EditText displayWalkingSpeed = findViewById(R.id.editText6);
+        EditText displayProficiency = findViewById(R.id.editText14);
+        EditText displayInitiative = findViewById(R.id.editText7);
+        EditText displayStrength = findViewById(R.id.editText8);
+        EditText displayDexterity = findViewById(R.id.editText9);
+        EditText displayConstitution = findViewById(R.id.editText10);
+        EditText displayCharisma = findViewById(R.id.editText11);
+        EditText displayIntelligence = findViewById(R.id.editText12);
+        EditText displayWisdom = findViewById(R.id.editText13);
 
-        Character.myCharacters.add(testCharacter);
-
-        // This huge block will get the right character and save it to charToDisplay
-        // Ex. Use textview123.setText(charToDisplay.getName()) to display name
-        if (Character.myCharacters.size() > 4) {
-            for (int i = 4; i > 0; i--) {
-                if (charName == Character.myCharacters.get(i).getName()) {
-                    charToDisplay = Character.myCharacters.get(i);
-                    //initStats(charToDisplay, displayName, displayStrength, displayDexterity, displayConstitution, displayCharisma, displayIntelligence,displayWisdom);
-                }
-            }
-        }
-        else if (Character.myCharacters.size() > 3) {
-            for (int i = 3; i > 0; i--) {
-                if (charName == Character.myCharacters.get(i).getName()) {
-                    charToDisplay = Character.myCharacters.get(i);
-                    //initStats(charToDisplay, displayName, displayStrength, displayDexterity, displayConstitution, displayCharisma, displayIntelligence,displayWisdom);
-                }
-            }
-        }
-        else if (Character.myCharacters.size() > 2) {
-            for (int i = 2; i > 0; i--) {
-                if (charName == Character.myCharacters.get(i).getName()) {
-                    charToDisplay = Character.myCharacters.get(i);
-                    //initStats(charToDisplay, displayName, displayStrength, displayDexterity, displayConstitution, displayCharisma, displayIntelligence,displayWisdom);
-                }
-            }
-        }
-        else if (Character.myCharacters.size() > 1) {
-            for (int i = 1; i > 0; i--) {
-                if (charName == Character.myCharacters.get(i).getName()) {
-                    charToDisplay = Character.myCharacters.get(i);
-                    //initStats(charToDisplay, displayName, displayStrength, displayDexterity, displayConstitution, displayCharisma, displayIntelligence,displayWisdom);
-                }
-            }
-        }
-        else if (Character.myCharacters.size() > 0) {
-            if (charName == Character.myCharacters.get(0).getName()) {
-                charToDisplay = Character.myCharacters.get(0);
-                //initStats(charToDisplay, displayName, displayStrength, displayDexterity, displayConstitution, displayCharisma, displayIntelligence,displayWisdom);
+        // Get the right Character and save it to charToDisplay
+        for (int i = 0; i < 4; i++) {
+            if (Character.myCharacters[i] != null && charName == Character.myCharacters[i].getName()) {
+                Character charToDisplay = Character.myCharacters[i];
+                initStats(charToDisplay, displayName, displayStrength, displayDexterity, displayConstitution, displayCharisma, displayIntelligence,displayWisdom);
+                break;
             }
         }
 
@@ -98,7 +64,9 @@ public class StatsActivity extends AppCompatActivity {
     }
 
     public void initStats(Character charToDisplay, TextView displayName, EditText displayStrength, EditText displayDexterity, EditText displayConstitution, EditText displayCharisma, EditText displayIntelligence, EditText displayWisdom) {
-        displayName.setText(charToDisplay.getName());
+        String temp = charToDisplay.getName();
+
+        displayName.setText(temp);
         // displayArmorClass.setText(charToDisplay.getArmorClass());
         // displayHP.setText(charToDisplay.getHP());
         // displayWalkingSpeed.setText(getWalkingSpeed());

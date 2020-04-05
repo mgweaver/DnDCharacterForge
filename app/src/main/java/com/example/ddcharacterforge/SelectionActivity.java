@@ -7,10 +7,13 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.Serializable;
+
 public class SelectionActivity extends AppCompatActivity {
 
     // Create a sample character
     public Character testCharacter = new Character();
+    public Character[] characterArray = Character.myCharacters;
     private LinearLayout characterListLayout;
     public static final String CHAR_NAME_TEXT = "com.example.ddcharacterforge.charName";
 
@@ -29,26 +32,26 @@ public class SelectionActivity extends AppCompatActivity {
         findViewById(R.id.button9).setVisibility(View.INVISIBLE);
 
         // Add test character to ArrayList of character objects
-        Character.myCharacters.add(testCharacter);
+        Character.myCharacters[0] = (testCharacter);
 
         // Display buttons depending on number of character objects in myCharacters
-        if (Character.myCharacters.size() != 0)
+        if (Character.myCharacters[0] != null)
         {
             findViewById(R.id.button4).setVisibility(View.VISIBLE);
         }
-        if (Character.myCharacters.size() > 1)
+        if (Character.myCharacters[1] != null)
         {
             findViewById(R.id.d20).setVisibility(View.VISIBLE);
         }
-        if (Character.myCharacters.size() > 2)
+        if (Character.myCharacters[2] != null)
         {
             findViewById(R.id.button6).setVisibility(View.VISIBLE);
         }
-        if (Character.myCharacters.size() > 3)
+        if (Character.myCharacters[3] != null)
         {
             findViewById(R.id.button7).setVisibility(View.VISIBLE);
         }
-        if (Character.myCharacters.size() > 4)
+        if (Character.myCharacters[4] != null)
         {
             findViewById(R.id.button9).setVisibility(View.VISIBLE);
         }
@@ -62,35 +65,35 @@ public class SelectionActivity extends AppCompatActivity {
 
     // Intents to StatsActivity
     public void statsButtonChar1(View view){
-        String charName = Character.myCharacters.get(0).getName();
+        String charName = Character.myCharacters[0].getName();
 
         Intent intent = new Intent(this, StatsActivity.class);
         intent.putExtra(CHAR_NAME_TEXT, charName);
         startActivity(intent);
     }
     public void statsButtonChar2(View view){
-        String charName = Character.myCharacters.get(1).getName();
+        String charName = Character.myCharacters[1].getName();
 
         Intent intent = new Intent(this, StatsActivity.class);
         intent.putExtra(CHAR_NAME_TEXT, charName);
         startActivity(intent);
     }
     public void statsButtonChar3(View view){
-        String charName = Character.myCharacters.get(2).getName();
+        String charName = Character.myCharacters[2].getName();
 
         Intent intent = new Intent(this, StatsActivity.class);
         intent.putExtra(CHAR_NAME_TEXT, charName);
         startActivity(intent);
     }
     public void statsButtonChar4(View view){
-        String charName = Character.myCharacters.get(3).getName();
+        String charName = Character.myCharacters[3].getName();
 
         Intent intent = new Intent(this, StatsActivity.class);
         intent.putExtra(CHAR_NAME_TEXT, charName);
         startActivity(intent);
     }
     public void statsButtonChar5(View view){
-        String charName = Character.myCharacters.get(4).getName();
+        String charName = Character.myCharacters[4].getName();
 
         Intent intent = new Intent(this, StatsActivity.class);
         intent.putExtra(CHAR_NAME_TEXT, charName);
