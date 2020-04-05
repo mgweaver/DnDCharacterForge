@@ -190,7 +190,7 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
 
         String characterJSON = gson.toJson(Character.myCharacters);
         try {
-            FileOutputStream fileout = openFileOutput("MyCharacters_JSON", MODE_PRIVATE);
+            FileOutputStream fileout = openFileOutput("MyCharacters_JSON.txt", MODE_PRIVATE);
             OutputStreamWriter outputWriter = new OutputStreamWriter(fileout);
             outputWriter.write(characterJSON);
             outputWriter.close();
