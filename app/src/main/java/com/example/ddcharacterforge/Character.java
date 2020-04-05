@@ -2,14 +2,12 @@ package com.example.ddcharacterforge;
 
 
 import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Character {
     // in Creation/Selection activities, use 'Character.myCharacters' to reference
-    // public static List<Character> myCharacters = new ArrayList<>();
-    public static Character myCharacters[] = new Character[5];
+    public static List<Character> myCharacters = new ArrayList<>();
     
     private String name;
     public Race races;

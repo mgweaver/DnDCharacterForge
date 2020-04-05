@@ -186,20 +186,8 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
 //        test.setText(characterJSON);
 
         //Adds the new character to list of characters created
-
-            if (Character.myCharacters[1] == null) {
-                Character.myCharacters[1] = newCharacter;
-            }
-            else if (Character.myCharacters[2] == null) {
-                Character.myCharacters[2] = newCharacter;
-            }
-            else if (Character.myCharacters[3] == null) {
-                Character.myCharacters[3] = newCharacter;
-            }
-            else if (Character.myCharacters[4] == null) {
-                Character.myCharacters[4] = newCharacter;
-            }
-        }
+        Character.myCharacters.add(newCharacter);
+    }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
