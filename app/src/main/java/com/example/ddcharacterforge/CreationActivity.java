@@ -39,6 +39,7 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
     String playerclass;
     String background;
     String subrace;
+    String subclasses;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -198,6 +199,7 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         //This are the last two characters in each of the spinner's id's
         if("s}".equals(lasttwo)){
             playerclass = text;
+            subclass();
         }
         if("e}".equals(lasttwo)){
             race = text;
@@ -211,6 +213,11 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         if("4}".equals(lasttwo)){
             subrace = text;
         }
+        //This is the spinner for subclasses
+        if("9}".equals(lasttwo)){
+            subclasses = text;
+        }
+
 
 
     }
@@ -314,6 +321,71 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
                 public void onClick(DialogInterface dialog, int which) {
                     Gson gson = new Gson();
                     newCharacter.subraces = gson.fromJson(getJSON(subrace), Subraces.class);
+                }
+            });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+
+            builder.show();
+        }
+    }
+
+    public void subclass(){
+        if(playerclass.equals("cleric") || playerclass.equals("sorcerer") || playerclass.equals("warlock")){
+            //Just like the ability score button we build a dialog
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            LinearLayout lila1= new LinearLayout(this);
+            lila1.setOrientation(LinearLayout.VERTICAL);
+            builder.setTitle("Choose your class Archetype");
+
+            Spinner subclass = new Spinner(this);
+            int id = 1000089;
+            subclass.setId(id);
+
+            //Only three classes choose their subclass at level 1; Cleric, Sorcerer, and Warlock.
+
+            if(playerclass.equals("cleric")){
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.DnD_Subclasses_cleric, android.R.layout.simple_spinner_item);
+                // Specify the layout to use when the list of choices appears
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                // Apply the adapter to the spinner
+                subclass.setAdapter(adapter);
+            }
+
+            if(playerclass.equals("sorcerer")){
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.DnD_Subclasses_sorcerer, android.R.layout.simple_spinner_item);
+                // Specify the layout to use when the list of choices appears
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                // Apply the adapter to the spinner
+                subclass.setAdapter(adapter);
+            }
+
+            if(playerclass.equals("warlock")){
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.DnD_Subclasses_warlock, android.R.layout.simple_spinner_item);
+                // Specify the layout to use when the list of choices appears
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                // Apply the adapter to the spinner
+                subclass.setAdapter(adapter);
+            }
+
+
+            subclass.setOnItemSelectedListener(this);
+
+            lila1.addView(subclass);
+            builder.setView(lila1);
+
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Gson gson = new Gson();
+                    newCharacter.archetypes = gson.fromJson(getJSON(subclasses), Archetypes.class);
                 }
             });
             builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
