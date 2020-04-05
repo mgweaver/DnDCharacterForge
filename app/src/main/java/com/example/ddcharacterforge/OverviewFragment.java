@@ -36,7 +36,6 @@ public class OverviewFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment OverviewFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static OverviewFragment newInstance(String param1, String param2) {
         OverviewFragment fragment = new OverviewFragment();
         Bundle args = new Bundle();
@@ -46,6 +45,7 @@ public class OverviewFragment extends Fragment {
         return fragment;
     }
 
+    //creates objects on view
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +55,7 @@ public class OverviewFragment extends Fragment {
         }
     }
 
+    //function to display  fragment view
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

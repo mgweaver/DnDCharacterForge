@@ -36,7 +36,6 @@ public class SkillsFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment SkillsFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static SkillsFragment newInstance(String param1, String param2) {
         SkillsFragment fragment = new SkillsFragment();
         Bundle args = new Bundle();
@@ -46,6 +45,7 @@ public class SkillsFragment extends Fragment {
         return fragment;
     }
 
+    // create all objects of fragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +55,7 @@ public class SkillsFragment extends Fragment {
         }
     }
 
+    //displays view as tab
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

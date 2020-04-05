@@ -107,6 +107,7 @@ public class StatsActivity extends AppCompatActivity {
 //            displayWisdom.setText(charToDisplay.getWisdom());
 //        }
 
+        // all necessary constructors for tabview layout
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());

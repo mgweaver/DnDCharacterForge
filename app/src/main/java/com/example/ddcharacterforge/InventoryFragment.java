@@ -15,12 +15,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class InventoryFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -36,7 +33,7 @@ public class InventoryFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment InventoryFragment.
      */
-    // TODO: Rename and change types and number of parameters
+    // name and args of ragment
     public static InventoryFragment newInstance(String param1, String param2) {
         InventoryFragment fragment = new InventoryFragment();
         Bundle args = new Bundle();
@@ -46,6 +43,7 @@ public class InventoryFragment extends Fragment {
         return fragment;
     }
 
+    //function to create fragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +53,7 @@ public class InventoryFragment extends Fragment {
         }
     }
 
+    //Creates instance of this fragment view to show tabs
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

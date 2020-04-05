@@ -12,7 +12,7 @@
         android:id="@+id/textView28"
         android:layout_width="421dp"
         android:layout_height="102dp"
-        android:text="Longsword"
+        android:text="Sitar"
         android:textAlignment="center"
         android:textSize="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,4 +21,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="421dp"
+        android:layout_height="102dp"
+        android:text="Rapier"
+        android:textAlignment="center"
+        android:textSize="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="421dp"
+        android:layout_height="102dp"
+        android:text="Leather Armor"
+        android:textAlignment="center"
+        android:textSize="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.324" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="421dp"
+        android:layout_height="102dp"
+        android:text="Dagger"
+        android:textAlignment="center"
+        android:textSize="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.486" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,5 @@
 {"name":"elf drow", "displayname":"elf drow", "baserace":"elf", "abilityscorebonuses":[{"Charisma":"1"}],
   "features":[{"featuretextwithbullet":["Your darkvision has a radius of 120 feet.",
-                                        "You have disadvantage on attack rolls and on W isdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.",
+                                        "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.",
                                         "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie firespell once per day. W hen you reach 5th level, you can also cast the darkness spell once per day. Charisma is your spellcasting ability for these spells.",
                                         "You have proficiency with rapiers, shortswords, and hand crossbows."], "setskillproficiency":[]}]}
