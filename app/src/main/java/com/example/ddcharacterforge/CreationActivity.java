@@ -488,7 +488,25 @@ public class CreationActivity extends AppCompatActivity implements AdapterView.O
         String randomBackground = listOfBackgrounds[new Random().nextInt(listOfBackgrounds.length)];
         newCharacter.classes = gson.fromJson(getJSON(randomBackground), PlayerClass.class);
 
+        //Adds the newly made character to my list of Characters.
         Character.myCharacters.add(newCharacter);
+
+        //Saves my characters to a file.
+        String characterJSON = gson.toJson(Character.myCharacters);
+        try {
+            FileOutputStream fileout = openFileOutput("MyCharacters_JSON.txt", MODE_PRIVATE);
+            OutputStreamWriter outputWriter = new OutputStreamWriter(fileout);
+            outputWriter.write(characterJSON);
+            outputWriter.close();
+
+            Toast.makeText(getBaseContext(), "File saved successfully!",
+                    Toast.LENGTH_SHORT).show();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         Intent intent = new Intent(this, SelectionActivity.class);
         startActivity(intent);
